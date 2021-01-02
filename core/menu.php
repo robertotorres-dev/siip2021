@@ -63,7 +63,7 @@
         </li>
       </ul>
     </li>
-    <li><a href="#">Egresados</a>
+    <li><a href="#">Egreso</a>
       <ul>
         <li><a href="../egresados/administracion-egresados.php">Administraci&oacute;n de egresados</a></li>
         <li><a href="../egresados/promocion-egresados.php">Promoci&oacute;n de egresados</a></li>
