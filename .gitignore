@@ -1,3 +1,6 @@
+# Archivo de configuración
+configuracion.php
+
 # JPEG
 *.jpg
 *.jpeg
@@ -61,6 +64,3 @@
 # 3D Images
 *.3dm
 *.max
-
-# Archivo de configuración
-configuracion.php
