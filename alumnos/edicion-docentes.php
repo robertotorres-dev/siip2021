@@ -300,17 +300,75 @@ function verificarContrasena( )
         </tr>
 
         <tr class="textoTitulos3">
-          <td colspan="2">L&iacute;nea de Generaci&oacute;n y Aplicaci&oacute;n del Conocimiento (LGAC) </td>
           <td colspan="2">Cuerpo acad&eacute;mico al que pertenece </td>
+          <td colspan="2">L&iacute;nea de Generaci&oacute;n y Aplicaci&oacute;n del Conocimiento (LGAC) </td>
         </tr>
         <tr class="textoTitulos4">
-          <td colspan="2"><input type="text" name="lgac" size="50" maxlength="50" value="<?php echo $obj2->lgac; ?>" /></td>
           <td colspan="2">
-          <select name="cuerpo_academico" >
+          <select name="cuerpo_academico" style="width: 400px">
             <option value=''></option>
-            <option value='1' <?php if( $obj2->cuerpo_academico==1 ) { echo "selected='selected'"; } ?>>Licenciatura Licenciatura</option>
+            <option value='1' <?php if( $obj2->cuerpo_academico==1 ) { echo "selected='selected'"; } ?>>UDG-CA-435 Desarrollo tecnológico e internacionalización de la pequeña y mediana empresa</option>
+            <option value='2' <?php if( $obj2->cuerpo_academico==2 ) { echo "selected='selected'"; } ?>>UDG-CA-484 Estrategias, Competitividad, Gestión del Conocimiento y Sustentabilidad</option>
+            <option value='3' <?php if( $obj2->cuerpo_academico==3 ) { echo "selected='selected'"; } ?>>UDG-CA-485 Estudios Urbanos y Territoriales</option>
+            <option value='4' <?php if( $obj2->cuerpo_academico==4 ) { echo "selected='selected'"; } ?>>UDG-CA-486 Análisis político y gestión de las organizaciones</option>
+            <option value='5' <?php if( $obj2->cuerpo_academico==5 ) { echo "selected='selected'"; } ?>>UDG-CA-502 Relaciones Económicas Internacionales de México</option>
+            <option value='6' <?php if( $obj2->cuerpo_academico==6 ) { echo "selected='selected'"; } ?>>UDG-CA-508 Investigación educativa y estudios sobre la universidad</option>
+            <option value='7' <?php if( $obj2->cuerpo_academico==7 ) { echo "selected='selected'"; } ?>>UDG-CA-667 Organizaciones, estrategias, servicios y gestión del conocimiento para el desarrollo, innovación y competitividad</option>
+            <option value='8' <?php if( $obj2->cuerpo_academico==8 ) { echo "selected='selected'"; } ?>>UDG-CA-826 Temas de economía internacional, finanzas y desarrollo</option>
+            <option value='9' <?php if( $obj2->cuerpo_academico==9 ) { echo "selected='selected'"; } ?>>UDG-CA-487 Procesos de internalización, Desarrollo  y Medio Ambiente</option>
+            <option value='10' <?php if( $obj2->cuerpo_academico==10 ) { echo "selected='selected'"; } ?>>UDG-CA-142 Desarrollo sustentable y estudios sectoriales</option>
+            <option value='11' <?php if( $obj2->cuerpo_academico==11 ) { echo "selected='selected'"; } ?>>UDG-CA-125 Tecnologías de la información y de la comunicación</option>
+            <option value='12' <?php if( $obj2->cuerpo_academico==12 ) { echo "selected='selected'"; } ?>>UDG-CA-124 Calidad e Innovación de la Educación Superior</option>
+            <option value='13' <?php if( $obj2->cuerpo_academico==13 ) { echo "selected='selected'"; } ?>>UDG-CA-394 Sociedad del Conocimiento e Internacionalización</option>
+            <option value='14' <?php if( $obj2->cuerpo_academico==14 ) { echo "selected='selected'"; } ?>>UDG-CA-459 Población, sustentabilidad y desarrollo regional</option>
+            <option value='15' <?php if( $obj2->cuerpo_academico==15 ) { echo "selected='selected'"; } ?>>UDG-CA-503 Estudios sobre las PYME's</option>
+            <option value='16' <?php if( $obj2->cuerpo_academico==16 ) { echo "selected='selected'"; } ?>>UDG-CA-525 Sujetos y Procesos en las Organizaciones</option>
+            <option value='17' <?php if( $obj2->cuerpo_academico==17 ) { echo "selected='selected'"; } ?>>UDG-CA-668 Sistema Alimentario y Gestión del Conocimiento</option>
+            <option value='18' <?php if( $obj2->cuerpo_academico==18 ) { echo "selected='selected'"; } ?>>UDG-CA-825 Tratados económicos nacionales y desarrollo regional</option>
+            <option value='19' <?php if( $obj2->cuerpo_academico==19 ) { echo "selected='selected'"; } ?>>UDG-CA-865 Estudios globales: enfoques y nuevas aproximaciones</option>
+            <option value='20' <?php if( $obj2->cuerpo_academico==20 ) { echo "selected='selected'"; } ?>>UDG-CA-932 Estudios fiscales, tic´s y educación</option>
+            <option value='21' <?php if( $obj2->cuerpo_academico==21 ) { echo "selected='selected'"; } ?>>UDG-CA-429 Estudios de género , población y desarrollo humano</option>
+            <option value='22' <?php if( $obj2->cuerpo_academico==22 ) { echo "selected='selected'"; } ?>>UDG-CA-127 Sector Público: Gestión, Financiamiento y evaluación</option>
+            <option value='23' <?php if( $obj2->cuerpo_academico==23 ) { echo "selected='selected'"; } ?>>UDG-118- Mercados de trabajo y desarrollo territorial</option>
+            <option value='24' <?php if( $obj2->cuerpo_academico==24 ) { echo "selected='selected'"; } ?>>UDG-CA-123 Negocios</option>
+            <option value='25' <?php if( $obj2->cuerpo_academico==25 ) { echo "selected='selected'"; } ?>>UDG-CA-430 Dinámica económica regional y mercados en el entorno global</option>
+            <option value='26' <?php if( $obj2->cuerpo_academico==26 ) { echo "selected='selected'"; } ?>>UDG-CA-483 Contaduría, finanzas y empresas competitivas y sustentables</option>
+            <option value='27' <?php if( $obj2->cuerpo_academico==27 ) { echo "selected='selected'"; } ?>>UDG-CA-535 Estudios Tributarios y Auditoría</option>
+            <option value='28' <?php if( $obj2->cuerpo_academico==28 ) { echo "selected='selected'"; } ?>>UDG-CA-614 Modelado y simulación de sistemas</option>
+            <option value='29' <?php if( $obj2->cuerpo_academico==29 ) { echo "selected='selected'"; } ?>>UDG-CA-648 Economía y gestión de la educación superior</option>
+            <option value='30' <?php if( $obj2->cuerpo_academico==30 ) { echo "selected='selected'"; } ?>>UDG-CA-669 Liderazgo y habilidades directivas en la gestión de empresas</option>
+            <option value='31' <?php if( $obj2->cuerpo_academico==31 ) { echo "selected='selected'"; } ?>>UDG-CA-670 Métodos de optimización para la toma de decisiones</option>
+            <option value='32' <?php if( $obj2->cuerpo_academico==32 ) { echo "selected='selected'"; } ?>>UDG-CA-722 Sistemas y gestión de la información</option>
+            <option value='33' <?php if( $obj2->cuerpo_academico==33 ) { echo "selected='selected'"; } ?>>UDG-CA-745 Paradigmas de la educación, regulación de mercados laborales y su simbiosis con turismo y sustentabilidad</option>
+            <option value='34' <?php if( $obj2->cuerpo_academico==34 ) { echo "selected='selected'"; } ?>>UDG-CA-747 Tributación, Sustentabilidad Ambiental y Empresa Socialmente Responsable</option>
+            <option value='35' <?php if( $obj2->cuerpo_academico==35 ) { echo "selected='selected'"; } ?>>UDG-CA-753 Métodos  Estadísticos y de Simulación Aplicados para Empresas y Mercados</option>
+            <option value='36' <?php if( $obj2->cuerpo_academico==36 ) { echo "selected='selected'"; } ?>>UDG-CA-757 Universidad, industria y empresa en el occidente de México</option>
+            <option value='37' <?php if( $obj2->cuerpo_academico==37 ) { echo "selected='selected'"; } ?>>UDG-CA-791 Gestión financiera de organizaciones de la economía social y solidaria</option>
+            <option value='38' <?php if( $obj2->cuerpo_academico==38 ) { echo "selected='selected'"; } ?>>UDG-CA-824 Movilidad y procesos interculturales</option>
+            <option value='39' <?php if( $obj2->cuerpo_academico==39 ) { echo "selected='selected'"; } ?>>UDG-CA-828 Administración financiera e innovación educativa</option>
+            <option value='40' <?php if( $obj2->cuerpo_academico==40 ) { echo "selected='selected'"; } ?>>UDG-CA-830 Turismo, recreación, cultura y gastronomía</option>
+            <option value='41' <?php if( $obj2->cuerpo_academico==41 ) { echo "selected='selected'"; } ?>>UDG-CA-831 FORMAS DE GOBERNANZA Y POLITICAS PUBLICAS ( Políticas Públicas para la Seguridad Humana)</option>
+            <option value='42' <?php if( $obj2->cuerpo_academico==42 ) { echo "selected='selected'"; } ?>>UDG-CA-860 Riesgos financieros contables y auditoria</option>
+            <option value='43' <?php if( $obj2->cuerpo_academico==43 ) { echo "selected='selected'"; } ?>>UDG-CA-866 Determinantes y restricciones al desarrollo y crecimiento económicos</option>
+            <option value='44' <?php if( $obj2->cuerpo_academico==44 ) { echo "selected='selected'"; } ?>>UDG-CA-867 Integración y Competencia Económica, Crecimiento Urbano-Regional y Ordenamiento del Territorio</option>
+            <option value='45' <?php if( $obj2->cuerpo_academico==45 ) { echo "selected='selected'"; } ?>>UDG-868-CA Articulación productiva y estrategia organizacional</option>
+            <option value='46' <?php if( $obj2->cuerpo_academico==46 ) { echo "selected='selected'"; } ?>>UDG-CA-143 Mercadotecnia, Internacionalización  y  competitividad</option>
+            <option value='47' <?php if( $obj2->cuerpo_academico==47 ) { echo "selected='selected'"; } ?>>UDG-CA-617 Psicología organizacional y salud</option>
+            <option value='48' <?php if( $obj2->cuerpo_academico==48 ) { echo "selected='selected'"; } ?>>UDG-CA-746 Estudios regionales, sustentabilidad y calidad de vida</option>
+            <option value='49' <?php if( $obj2->cuerpo_academico==49 ) { echo "selected='selected'"; } ?>>UDG-CA-829 Políticas Públicas para le calidad Educativa</option>
+            <option value='50' <?php if( $obj2->cuerpo_academico==50 ) { echo "selected='selected'"; } ?>>UDG-CA-930 Contabilidad financiera fiscal</option>
+            <option value='51' <?php if( $obj2->cuerpo_academico==51 ) { echo "selected='selected'"; } ?>>UDG-CA-116 Teoría Económica y Desarrollo Sustentable</option>
+            <option value='52' <?php if( $obj2->cuerpo_academico==52 ) { echo "selected='selected'"; } ?>>UDG-CA-823 Comunicación y procesos de gestión organizacional</option>
+            <option value='53' <?php if( $obj2->cuerpo_academico==53 ) { echo "selected='selected'"; } ?>>UDG-CA-934 Políticas públicas y Bienestar</option>
+            <option value='54' <?php if( $obj2->cuerpo_academico==54 ) { echo "selected='selected'"; } ?>>UDG-CA-827  Estudios culturales sobre los pueblos originarios</option>
+            <option value='55' <?php if( $obj2->cuerpo_academico==55 ) { echo "selected='selected'"; } ?>>UDG-CA-556 Economía Global y Regional</option>
+            <option value='56' <?php if( $obj2->cuerpo_academico==56 ) { echo "selected='selected'"; } ?>>UDG-CA-649 E-World y Gestión del Conocimiento</option>
+            <option value='57' <?php if( $obj2->cuerpo_academico==57 ) { echo "selected='selected'"; } ?>>UDG-CA-666 Gestión, innovación e investigación educativa</option>
+            <option value='58' <?php if( $obj2->cuerpo_academico==58 ) { echo "selected='selected'"; } ?>>UDG-CA-931 Educación, tecnologías e innovación</option>
+            <option value='59' <?php if( $obj2->cuerpo_academico==59 ) { echo "selected='selected'"; } ?>>UDG-CA-933 Políticas Educativas e Inclusión en la era digital</option>
           </select>
           </td>
+          <td colspan="2"><input type="text" name="lgac" size="50" maxlength="50" value="<?php echo $obj2->lgac; ?>" /></td>
         </tr>
         <tr>
           <td>&nbsp;</td>

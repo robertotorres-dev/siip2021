@@ -162,13 +162,13 @@ function confirmarBaja( )
           <td>&nbsp;</td>
         </tr>
         <tr class="textoTitulos3">
-          <td>Modalidad &bull;</td>
+          <td>Modalidad:</td>
           <td>&nbsp;</td>
           <td>&nbsp;</td>
           <td>&nbsp;</td>
         </tr>
         <tr class="textoTitulos4">
-          <td><?php echo $obj2->modalidad; ?>&nbsp;</td>
+          <td><?php echo $obj2->modalidad_txt; ?>&nbsp;</td>
           <td>&nbsp;</td>
           <td>&nbsp;</td>
           <td>&nbsp;</td>
@@ -181,13 +181,13 @@ function confirmarBaja( )
         </tr>
 
         <tr class="textoTitulos3">
-          <td colspan="2">Instituci&oacute;n en donde obtuvo el &uacute;ltimo grado de estudios &bull;</td>
-          <td>&Uacute;ltimo grado de estudios &bull;</td>
-          <td>Fecha de obtenci&oacute;n del &uacute;ltimo grado </td>
+          <td colspan="2">Instituci&oacute;n en donde obtuvo el &uacute;ltimo grado de estudios:</td>
+          <td>&Uacute;ltimo grado de estudios:</td>
+          <td>Fecha de obtenci&oacute;n del &uacute;ltimo grado:</td>
         </tr>
         <tr class="textoTitulos4">
           <td colspan="2"><?php echo $obj2->institucion; ?>&nbsp;</td>
-          <td><?php echo $obj2->escolaridad; ?>&nbsp;</td>
+          <td><?php echo $obj2->escolaridad_txt; ?>&nbsp;</td>
           <td><?php echo $obj2->fecha_titulacion; ?>&nbsp;</td>
         </tr>
         <tr>
@@ -198,16 +198,16 @@ function confirmarBaja( )
         </tr>
 
         <tr class="textoTitulos3">
-          <td>N&uacute;mero de CVU </td>
-          <td>Miembre del S.N.I. </td>
-          <td>Nivel del S.N.I.</td>
-          <td>Perfil PRODEP </td>
+          <td>N&uacute;mero de CVU:</td>
+          <td>Miembre del S.N.I.:</td>
+          <td>Nivel del S.N.I.:</td>
+          <td>Perfil PRODEP:</td>
         </tr>
         <tr class="textoTitulos4">
           <td><?php echo $obj2->numero_cvu; ?>&nbsp;</td>
-          <td><?php echo $obj2->miembro_sni; ?>&nbsp;</td>
-          <td><?php echo $obj2->nivel_sni; ?>&nbsp;</td>
-          <td><?php echo $obj2->perfil_prodep; ?>&nbsp;</td>
+          <td><?php echo $obj2->miembro_sni_txt; ?>&nbsp;</td>
+          <td><?php echo $obj2->nivel_sni_txt; ?>&nbsp;</td>
+          <td><?php echo $obj2->perfil_prodep_txt; ?>&nbsp;</td>
         </tr>
         <tr>
           <td>&nbsp;</td>
@@ -217,12 +217,12 @@ function confirmarBaja( )
         </tr>
 
         <tr class="textoTitulos3">
-          <td colspan="2">L&iacute;nea de Generaci&oacute;n y Aplicaci&oacute;n del Conocimiento (LGAC) </td>
-          <td colspan="2">Cuerpo acad&eacute;mico al que pertenece </td>
+          <td colspan="2">Cuerpo acad&eacute;mico al que pertenece:</td>
+          <td colspan="2">L&iacute;nea de Generaci&oacute;n y Aplicaci&oacute;n del Conocimiento (LGAC):</td>
         </tr>
         <tr class="textoTitulos4">
+          <td colspan="2"><?php echo $obj2->cuerpo_academico_txt; ?>&nbsp;</td>
           <td colspan="2"><?php echo $obj2->lgac; ?>&nbsp;</td>
-          <td colspan="2"><?php echo $obj2->cuerpo_academico; ?>&nbsp;</td>
         </tr>
         <tr>
           <td>&nbsp;</td>
@@ -232,10 +232,10 @@ function confirmarBaja( )
         </tr>
 
         <tr class="textoTitulos3">
-          <td colspan="4">Nombre de los proyectos de investigaci&oacute;n que desarrolla </td>
+          <td colspan="4">Nombre de los proyectos de investigaci&oacute;n que desarrolla:</td>
         </tr>
         <tr class="textoTitulos4">
-          <td colspan="4" valign="top"><textarea name="proyectos" cols="102" rows="10" required="required" ><?php echo $obj2->proyectos; ?>&nbsp;</textarea></td>
+          <td colspan="4" valign="top"><?php echo nl2br($obj2->proyectos); ?></td>
         </tr>
         <tr>
           <td>&nbsp;</td>

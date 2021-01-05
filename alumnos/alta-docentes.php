@@ -269,17 +269,75 @@ function verificarContrasena( )
         </tr>
 
         <tr class="textoTitulos3">
-          <td colspan="2">L&iacute;nea de Generaci&oacute;n y Aplicaci&oacute;n del Conocimiento (LGAC) </td>
           <td colspan="2">Cuerpo acad&eacute;mico al que pertenece </td>
+          <td colspan="2">L&iacute;nea de Generaci&oacute;n y Aplicaci&oacute;n del Conocimiento (LGAC) </td>
         </tr>
         <tr class="textoTitulos4">
-          <td colspan="2"><input type="text" name="lgac" size="50" maxlength="50" /></td>
           <td colspan="2">
-          <select name="cuerpo_academico" >
+          <select name="cuerpo_academico" style="width: 400px">
             <option value=''></option>
-            <option value='1'>Licenciatura Licenciatura</option>
+            <option value='1'>UDG-CA-435 Desarrollo tecnológico e internacionalización de la pequeña y mediana empresa</option>
+            <option value='2'>UDG-CA-484 Estrategias, Competitividad, Gestión del Conocimiento y Sustentabilidad</option>
+            <option value='3'>UDG-CA-485 Estudios Urbanos y Territoriales</option>
+            <option value='4'>UDG-CA-486 Análisis político y gestión de las organizaciones</option>
+            <option value='5'>UDG-CA-502 Relaciones Económicas Internacionales de México</option>
+            <option value='6'>UDG-CA-508 Investigación educativa y estudios sobre la universidad</option>
+            <option value='7'>UDG-CA-667 Organizaciones, estrategias, servicios y gestión del conocimiento para el desarrollo, innovación y competitividad</option>
+            <option value='8'>UDG-CA-826 Temas de economía internacional, finanzas y desarrollo</option>
+            <option value='9'>UDG-CA-487 Procesos de internalización, Desarrollo  y Medio Ambiente</option>
+            <option value='10'>UDG-CA-142 Desarrollo sustentable y estudios sectoriales</option>
+            <option value='11'>UDG-CA-125 Tecnologías de la información y de la comunicación</option>
+            <option value='12'>UDG-CA-124 Calidad e Innovación de la Educación Superior</option>
+            <option value='13'>UDG-CA-394 Sociedad del Conocimiento e Internacionalización</option>
+            <option value='14'>UDG-CA-459 Población, sustentabilidad y desarrollo regional</option>
+            <option value='15'>UDG-CA-503 Estudios sobre las PYME's</option>
+            <option value='16'>UDG-CA-525 Sujetos y Procesos en las Organizaciones</option>
+            <option value='17'>UDG-CA-668 Sistema Alimentario y Gestión del Conocimiento</option>
+            <option value='18'>UDG-CA-825 Tratados económicos nacionales y desarrollo regional</option>
+            <option value='19'>UDG-CA-865 Estudios globales: enfoques y nuevas aproximaciones</option>
+            <option value='20'>UDG-CA-932 Estudios fiscales, tic´s y educación</option>
+            <option value='21'>UDG-CA-429 Estudios de género , población y desarrollo humano</option>
+            <option value='22'>UDG-CA-127 Sector Público: Gestión, Financiamiento y evaluación</option>
+            <option value='23'>UDG-118- Mercados de trabajo y desarrollo territorial</option>
+            <option value='24'>UDG-CA-123 Negocios</option>
+            <option value='25'>UDG-CA-430 Dinámica económica regional y mercados en el entorno global</option>
+            <option value='26'>UDG-CA-483 Contaduría, finanzas y empresas competitivas y sustentables</option>
+            <option value='27'>UDG-CA-535 Estudios Tributarios y Auditoría</option>
+            <option value='28'>UDG-CA-614 Modelado y simulación de sistemas</option>
+            <option value='29'>UDG-CA-648 Economía y gestión de la educación superior</option>
+            <option value='30'>UDG-CA-669 Liderazgo y habilidades directivas en la gestión de empresas</option>
+            <option value='31'>UDG-CA-670 Métodos de optimización para la toma de decisiones</option>
+            <option value='32'>UDG-CA-722 Sistemas y gestión de la información</option>
+            <option value='33'>UDG-CA-745 Paradigmas de la educación, regulación de mercados laborales y su simbiosis con turismo y sustentabilidad</option>
+            <option value='34'>UDG-CA-747 Tributación, Sustentabilidad Ambiental y Empresa Socialmente Responsable</option>
+            <option value='35'>UDG-CA-753 Métodos  Estadísticos y de Simulación Aplicados para Empresas y Mercados</option>
+            <option value='36'>UDG-CA-757 Universidad, industria y empresa en el occidente de México</option>
+            <option value='37'>UDG-CA-791 Gestión financiera de organizaciones de la economía social y solidaria</option>
+            <option value='38'>UDG-CA-824 Movilidad y procesos interculturales</option>
+            <option value='39'>UDG-CA-828 Administración financiera e innovación educativa</option>
+            <option value='40'>UDG-CA-830 Turismo, recreación, cultura y gastronomía</option>
+            <option value='41'>UDG-CA-831 FORMAS DE GOBERNANZA Y POLITICAS PUBLICAS ( Políticas Públicas para la Seguridad Humana)</option>
+            <option value='42'>UDG-CA-860 Riesgos financieros contables y auditoria</option>
+            <option value='43'>UDG-CA-866 Determinantes y restricciones al desarrollo y crecimiento económicos</option>
+            <option value='44'>UDG-CA-867 Integración y Competencia Económica, Crecimiento Urbano-Regional y Ordenamiento del Territorio</option>
+            <option value='45'>UDG-868-CA Articulación productiva y estrategia organizacional</option>
+            <option value='46'>UDG-CA-143 Mercadotecnia, Internacionalización  y  competitividad</option>
+            <option value='47'>UDG-CA-617 Psicología organizacional y salud</option>
+            <option value='48'>UDG-CA-746 Estudios regionales, sustentabilidad y calidad de vida</option>
+            <option value='49'>UDG-CA-829 Políticas Públicas para le calidad Educativa</option>
+            <option value='50'>UDG-CA-930 Contabilidad financiera fiscal</option>
+            <option value='51'>UDG-CA-116 Teoría Económica y Desarrollo Sustentable</option>
+            <option value='52'>UDG-CA-823 Comunicación y procesos de gestión organizacional</option>
+            <option value='53'>UDG-CA-934 Políticas públicas y Bienestar</option>
+            <option value='54'>UDG-CA-827  Estudios culturales sobre los pueblos originarios</option>
+            <option value='55'>UDG-CA-556 Economía Global y Regional</option>
+            <option value='56'>UDG-CA-649 E-World y Gestión del Conocimiento</option>
+            <option value='57'>UDG-CA-666 Gestión, innovación e investigación educativa</option>
+            <option value='58'>UDG-CA-931 Educación, tecnologías e innovación</option>
+            <option value='59'>UDG-CA-933 Políticas Educativas e Inclusión en la era digital</option>
           </select>
           </td>
+          <td colspan="2"><input type="text" name="lgac" size="50" maxlength="50" /></td>
         </tr>
         <tr>
           <td>&nbsp;</td>

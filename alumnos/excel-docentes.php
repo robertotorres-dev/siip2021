@@ -19,6 +19,7 @@
   
   $obj3 = new Docentes( );
   $obj3->listaDocentes( );
+  
 ?>
 
 
@@ -86,16 +87,16 @@
     <td><?php echo $obj3->fecha_nacimiento[$i]; ?></td>
     <td><?php echo $obj3->lugar_nacimiento[$i]; ?></td>
     <td><?php echo $obj3->modalidad_txt[$i]; ?></td>
-    <td><?php echo $obj3->escolaridad[$i]; ?></td>
+    <td><?php echo $obj3->escolaridad_txt[$i]; ?></td>
     <td><?php echo $obj3->institucion[$i]; ?></td>
     <td><?php echo $obj3->fecha_titulacion[$i]; ?></td>
     <td><?php echo $obj3->numero_cvu[$i]; ?></td>
-    <td><?php echo $obj3->miembro_sni[$i]; ?></td>
-    <td><?php echo $obj3->nivel_sni[$i]; ?></td>
-    <td><?php echo $obj3->perfil_prodep[$i]; ?></td>
-    <td><?php echo $obj3->cuerpo_academico[$i]; ?></td>
+    <td><?php echo $obj3->miembro_sni_txt[$i]; ?></td>
+    <td><?php echo $obj3->nivel_sni_txt[$i]; ?></td>
+    <td><?php echo $obj3->perfil_prodep_txt[$i]; ?></td>
+    <td><?php echo $obj3->cuerpo_academico_txt[$i]; ?></td>
     <td><?php echo $obj3->lgac[$i]; ?></td>
-    <td><?php echo $obj3->proyectos[$i]; ?></td>
+    <td><?php echo nl2br($obj3->proyectos[$i]); ?></td>
   </tr>
   <?php
     }
