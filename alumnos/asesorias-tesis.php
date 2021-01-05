@@ -16,7 +16,7 @@
   
   $obj3 = new CVU_Alumnos( );
   $obj3->id_alumno = $obj2->id_alumno;
-  $obj3->listaCVUAlumno3( );
+  $obj3->listaCVUAlumno1( );
   
   if( isset( $_GET["id_cvu_alumno"] ) ) 
   {
@@ -94,7 +94,7 @@ function confirmarBaja( )
           <td>&nbsp;</td>
         </tr>
         <tr class="textoTitulos2">
-          <td colspan="4">Avances de tesis</td>
+          <td colspan="4">Reportes de asesor&iacute;as de tesis</td>
         </tr>
         <tr>
           <td>&nbsp;</td>
@@ -138,9 +138,9 @@ function confirmarBaja( )
           <td>&nbsp;</td>
           <td>&nbsp;</td>
         </tr>
-        <form id="form1" name="form1" method="post" action="tesis-alumnos2.php" enctype="multipart/form-data">
+        <form id="form1" name="form1" method="post" action="asesorias-tesis2.php" enctype="multipart/form-data">
         <tr class="textoTablas1">
-          <td colspan="4">DATOS AVANCES DE TESIS</td>
+          <td colspan="4">DATOS ASESOR&Iacute;AS DE TESIS</td>
         </tr>
         <tr>
           <td>&nbsp;</td>
@@ -149,33 +149,39 @@ function confirmarBaja( )
           <td>&nbsp;</td>
         </tr>
         <tr class="textoTitulos3">
-          <td>Descripción &bull;</td>
-          <td>Fecha Inicio</td>
-          <td>Fecha Fin</td>
-          <td>&nbsp;</td>
+          <td>Fecha &bull;</td>
+          <td colspan="3">Lugar &bull;</td>
         </tr>
         <tr class="textoTitulos4">
-          <td rowspan="4">
-          <textarea name="descripcion" cols="60" rows="6" maxlength="250" required="required"><?php echo $obj4->descripcion; ?></textarea>
-          </td>
-          <td><input type="date" name="fecha_inicio" placeholder="aaaa-mm-dd" value="<?php echo $obj4->fecha_inicio; ?>" /></td>
-          <td><input type="date" name="fecha_fin" placeholder="aaaa-mm-dd" value="<?php echo $obj4->fecha_fin; ?>" /></td>
-          <td align="center">
-          <input type="submit" name="submit" value="   Enviar   " />
-          <input type="hidden" name="id_alumno" value="<?php echo $obj2->id_alumno; ?>" />
-          <input type="hidden" name="id_cvu_alumno" value="<?php echo $obj4->id_cvu_alumno; ?>" />
-          </td>
+          <td><input type="date" name="fecha" placeholder="aaaa-mm-dd" required="required" value="<?php echo $obj4->fecha; ?>" /></td>
+          <td colspan="3"><input type="text" name="texto1" size="50" maxlength="300" required="required" value="<?php echo $obj4->texto1; ?>" /></td>
         </tr>
         <tr>
           <td>&nbsp;</td>
           <td>&nbsp;</td>
           <td>&nbsp;</td>
+          <td>&nbsp;</td>
         </tr>
         <tr class="textoTitulos3">
-          <td colspan="3">Documento</td>
+          <td>Avances &bull;</td>
+          <td colspan="3">Compromisos &bull;</td>
         </tr>
         <tr class="textoTitulos4">
-          <td colspan="3">
+          <td><textarea name="texto2" cols="60" rows="6" maxlength="300" required="required"><?php echo $obj4->texto2; ?></textarea></td>
+          <td colspan="3"><textarea name="texto3" cols="60" rows="6" maxlength="300" required="required"><?php echo $obj4->texto3; ?></textarea></td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr class="textoTitulos3">
+          <td>Archivo PDF</td>
+          <td colspan="3">&nbsp;</td>
+        </tr>
+        <tr class="textoTitulos4">
+          <td>
           <input type="file" name="archivo" size="25" />
           <?php
             if( $obj4->archivo!=null )
@@ -183,6 +189,11 @@ function confirmarBaja( )
               printf( "<a href='../uploads/%s' class='textoTitulos4' target='_blank'>%s</a>", $obj4->archivo, $obj4->archivo );
 	    }
 	  ?>
+          </td>
+          <td colspan="3">
+          <input type="submit" name="submit" value="   Enviar   " />
+          <input type="hidden" name="id_alumno" value="<?php echo $obj2->id_alumno; ?>" />
+          <input type="hidden" name="id_cvu_alumno" value="<?php echo $obj4->id_cvu_alumno; ?>" />
           </td>
         </tr>
         </form>
@@ -193,9 +204,9 @@ function confirmarBaja( )
           <td>&nbsp;</td>
         </tr>
         <tr class="textoTablas1">
-          <td>DESCRIPCI&Oacute;N</td>
+          <td>AVANCES</td>
           <td>FECHA</td>
-          <td>DOCUMENTO</td>
+          <td>ARCHIVO PDF</td>
           <td>ACCIONES</td>
         </tr>
         <?php
@@ -205,8 +216,8 @@ function confirmarBaja( )
           {
 	?>
         <tr class="textoTablas2">
-          <td valign="top"><?php echo nl2br( $obj3->descripcion[$i] ); ?>&nbsp;</td>
-          <td valign="top"><?php echo $obj3->fecha_inicio[$i]." / ".$obj3->fecha_fin[$i]; ?>&nbsp;</td>
+          <td valign="top"><?php echo nl2br( $obj3->texto2[$i] ); ?>&nbsp;</td>
+          <td valign="top"><?php echo $obj3->fecha[$i]; ?>&nbsp;</td>
           <td valign="top">
           <?php
             if( $obj3->archivo[$i]!=null )
@@ -219,7 +230,7 @@ function confirmarBaja( )
             <table border="0" cellspacing="0" cellpadding="0" align="center">
               <tr>
                 <td>
-                <form id="form2" name="form2" method="get" action="tesis-alumnos.php">
+                <form id="form2" name="form2" method="get" action="asesorias-tesis.php">
                 <input type="image" name="submit" src="../images/icon-edit.png" />
                 <input type="hidden" name="id_alumno" value="<?php echo $obj2->id_alumno; ?>" />
                 <input type="hidden" name="id_cvu_alumno" value="<?php echo $obj3->id_cvu_alumno[$i]; ?>" />
@@ -227,7 +238,7 @@ function confirmarBaja( )
                 </td>
                 <td>&nbsp;</td>
                 <td>
-                <form id="form3" name="form3" method="post" action="tesis-alumnos3.php" onclick="return confirmarBaja( )">
+                <form id="form3" name="form3" method="post" action="asesorias-tesis3.php" onclick="return confirmarBaja( )">
                 <input type="image" name="submit" src="../images/icon-delete.png" />
                 <input type="hidden" name="id_alumno" value="<?php echo $obj2->id_alumno; ?>" />
                 <input type="hidden" name="id_cvu_alumno" value="<?php echo $obj3->id_cvu_alumno[$i]; ?>" />
@@ -240,6 +251,18 @@ function confirmarBaja( )
         <?php
 	  }
 	?>
+        <tr>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td align="center"><input type="button" onclick="location.href='excel-asesorias-tesis.php?id_alumno=<?php echo $_GET["id_alumno"]; ?>'" value=" Exportar Excel " /></td>
+        </tr>
         <tr>
           <td>&nbsp;</td>
           <td>&nbsp;</td>

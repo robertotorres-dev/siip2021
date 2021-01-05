@@ -14,6 +14,6 @@
   $obj2->id_cvu_alumno = $_POST["id_cvu_alumno"];
   $obj2->eliminarCVU( );
   
-  header( "Location: intercambios-alumnos.php?id_alumno=$obj2->id_alumno" );
+  header( "Location: informes.php?id_alumno=$obj2->id_alumno" );
   exit( );
 ?>

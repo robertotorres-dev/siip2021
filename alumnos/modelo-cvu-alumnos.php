@@ -10,9 +10,10 @@
     public $id_cvu_alumno;
     public $id_alumno;
     public $categoria;
-    public $descripcion;   
-    public $fecha_inicio;
-    public $fecha_fin;
+    public $fecha;
+    public $texto1;
+    public $texto2;
+    public $texto3;
     public $archivo;
     public $status;
     
@@ -45,12 +46,12 @@
       if( $this->archivo!=null )
       {
         $ext = pathinfo( $this->archivo, PATHINFO_EXTENSION );
-        rename( "../uploads/".$this->archivo, "../uploads/AL-".$this->id_alumno."-".$this->id_cvu_alumno.".".$ext );
-	$this->archivo = "AL-".$this->id_alumno."-".$this->id_cvu_alumno.".".$ext;
+        rename( "../uploads/".$this->archivo, "../uploads/A-CVU-".$this->id_alumno."-".$this->id_cvu_alumno.".".$ext );
+	$this->archivo = "A-CVU-".$this->id_alumno."-".$this->id_cvu_alumno.".".$ext;
       }
       
-      $sql = "insert into cvu_alumnos values ( '$this->id_cvu_alumno', '$this->id_alumno', '$this->categoria', '$this->descripcion', 
-      '$this->fecha_inicio', '$this->fecha_fin', '$this->archivo', '$this->status' )";
+      $sql = "insert into cvu_alumnos values ( '$this->id_cvu_alumno', '$this->id_alumno', '$this->categoria', '$this->fecha', 
+      '$this->texto1', '$this->texto2', '$this->texto3', '$this->archivo', '$this->status' )";
       $res = $this->mysqli->query( $sql );
       
       $this->mysqli->close( );
@@ -71,14 +72,14 @@
       if( $this->archivo!=null )
       {
         $ext = pathinfo( $this->archivo, PATHINFO_EXTENSION );
-        rename( "../uploads/".$this->archivo, "../uploads/AL-".$this->id_alumno."-".$this->id_cvu_alumno.".".$ext );
-	$this->archivo = "AL-".$this->id_alumno."-".$this->id_cvu_alumno.".".$ext;
+        rename( "../uploads/".$this->archivo, "../uploads/A-CVU-".$this->id_alumno."-".$this->id_cvu_alumno.".".$ext );
+	$this->archivo = "A-CVU-".$this->id_alumno."-".$this->id_cvu_alumno.".".$ext;
 	
 	$sql = "update cvu_alumnos set archivo='$this->archivo' where id_cvu_alumno='$this->id_cvu_alumno'";
         $res = $this->mysqli->query( $sql );
       }
       
-      $sql = "update cvu_alumnos set descripcion='$this->descripcion', fecha_inicio='$this->fecha_inicio', fecha_fin='$this->fecha_fin' 
+      $sql = "update cvu_alumnos set fecha='$this->fecha', texto1='$this->texto1', texto2='$this->texto2', texto3='$this->texto3' 
       where id_cvu_alumno='$this->id_cvu_alumno'";
       $res = $this->mysqli->query( $sql );
       
@@ -99,9 +100,10 @@
 	
 	$this->id_alumno = $obj->id_alumno;
 	$this->categoria = $obj->categoria;
-	$this->descripcion = $obj->descripcion;
-	$this->fecha_inicio = $obj->fecha_inicio;
-	$this->fecha_fin = $obj->fecha_fin;
+	$this->fecha = $obj->fecha;
+	$this->texto1 = $obj->texto1;
+	$this->texto2 = $obj->texto2;
+	$this->texto3 = $obj->texto3;
 	$this->archivo = $obj->archivo;
       }
       
@@ -122,9 +124,10 @@
         $obj = $res->fetch_object( );
 	
 	$this->id_cvu_alumno[$i] = $obj->id_cvu_alumno;
-	$this->descripcion[$i] = $obj->descripcion;
-	$this->fecha_inicio[$i] = $obj->fecha_inicio;
-	$this->fecha_fin[$i] = $obj->fecha_fin;
+	$this->fecha[$i] = $obj->fecha;
+	$this->texto1[$i] = $obj->texto1;
+	$this->texto2[$i] = $obj->texto2;
+	$this->texto3[$i] = $obj->texto3;
 	$this->archivo[$i] = $obj->archivo;
       }
       
@@ -145,9 +148,10 @@
         $obj = $res->fetch_object( );
 	
 	$this->id_cvu_alumno[$i] = $obj->id_cvu_alumno;
-	$this->descripcion[$i] = $obj->descripcion;
-	$this->fecha_inicio[$i] = $obj->fecha_inicio;
-	$this->fecha_fin[$i] = $obj->fecha_fin;
+	$this->fecha[$i] = $obj->fecha;
+	$this->texto1[$i] = $obj->texto1;
+	$this->texto2[$i] = $obj->texto2;
+	$this->texto3[$i] = $obj->texto3;
 	$this->archivo[$i] = $obj->archivo;
       }
       
@@ -168,9 +172,10 @@
         $obj = $res->fetch_object( );
 	
 	$this->id_cvu_alumno[$i] = $obj->id_cvu_alumno;
-	$this->descripcion[$i] = $obj->descripcion;
-	$this->fecha_inicio[$i] = $obj->fecha_inicio;
-	$this->fecha_fin[$i] = $obj->fecha_fin;
+	$this->fecha[$i] = $obj->fecha;
+	$this->texto1[$i] = $obj->texto1;
+	$this->texto2[$i] = $obj->texto2;
+	$this->texto3[$i] = $obj->texto3;
 	$this->archivo[$i] = $obj->archivo;
       }
       

@@ -24,17 +24,18 @@
   
   if( $_FILES["archivo"]["name"]!=null && $exito==0 )
   {
-    header( "Location: intercambios-alumnos.php?id_alumno=".$_POST["id_alumno"]."&error=1" );
+    header( "Location: informes.php?id_alumno=".$_POST["id_alumno"]."&error=1" );
     exit( );
   }
   
   $obj2 = new CVU_Alumnos( );
   $obj2->id_cvu_alumno = $_POST["id_cvu_alumno"];
   $obj2->id_alumno = $_POST["id_alumno"];
-  $obj2->categoria = "1";
-  $obj2->descripcion = $_POST["descripcion"];
-  $obj2->fecha_inicio = $_POST["fecha_inicio"];
-  $obj2->fecha_fin = $_POST["fecha_fin"];
+  $obj2->categoria = 3;
+  $obj2->fecha = $_POST["fecha"];
+  $obj2->texto1 = $_POST["texto1"];
+  $obj2->texto2 = $_POST["texto2"];
+  $obj2->texto3 = $_POST["texto3"];
   $obj2->archivo = $_FILES["archivo"]["name"];
   $obj2->status = 1;
   
@@ -47,6 +48,6 @@
     $obj2->modificarCVU( );
   }
   
-  header( "Location: intercambios-alumnos.php?id_alumno=$obj2->id_alumno" );
+  header( "Location: informes.php?id_alumno=$obj2->id_alumno" );
   exit( );
 ?>

@@ -46,9 +46,8 @@
         <li><a href="#">Seguimiento</a>
           <ul>
             <li><a href="../alumnos/trayectorias-academicas.php">Trayectorias acad&eacute;micas</a></li>
-            <li><a href="../alumnos/intercambios-academicos.php">Intercambios acad&eacute;micos</a></li>
-            <li><a href="../alumnos/participacion-alumnos.php">Part. de alumnos en eventos</a></li>
-            <li><a href="../alumnos/tutores-asesores.php">Tutores y asesores de tesis</a></li>
+            <li><a href="../alumnos/informes-tesis.php">Informes de tesis</a></li>
+            <li><a href="../alumnos/movilidad-alumnos.php">Movilidad de alumnos</a></li>
           </ul>
         </li>
         <li><a href="../alumnos/promocion-alumnos.php">Promoci&oacute;n de alumnos</a></li>

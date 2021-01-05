@@ -1,4 +1,4 @@
-<?php
+﻿<?php
   require_once "../core/modelo-usuarios.php";
   require_once "../core/modelo-programas.php";
   require_once "../core/modelo-orientaciones.php";
@@ -77,7 +77,7 @@ function MM_jumpMenu(targ,selObj,restore){ //v3.0
           <td>&nbsp;</td>
         </tr>
         <tr class="textoTitulos2">
-          <td colspan="4">Intercambios acad&eacute;micos</td>
+          <td colspan="4">Informes de tesis</td>
         </tr>
         <tr>
           <td>&nbsp;</td>
@@ -111,11 +111,11 @@ function MM_jumpMenu(targ,selObj,restore){ //v3.0
             {
               if( $obj3->id_ciclo[$i]==$obj4->id_ciclo )
 	      {
-                printf( "<option value='intercambios-academicos.php?id_ciclo=%d' selected='selected'>%s</option>\n", $obj3->id_ciclo[$i], $obj3->nombre[$i] );
+                printf( "<option value='informes-tesis.php?id_ciclo=%d' selected='selected'>%s</option>\n", $obj3->id_ciclo[$i], $obj3->nombre[$i] );
 	      }
 	      else
 	      {
-                printf( "<option value='intercambios-academicos.php?id_ciclo=%d'>%s</option>\n", $obj3->id_ciclo[$i], $obj3->nombre[$i] );
+                printf( "<option value='informes-tesis.php?id_ciclo=%d'>%s</option>\n", $obj3->id_ciclo[$i], $obj3->nombre[$i] );
 	      }
             }
 	  ?>
@@ -150,8 +150,12 @@ function MM_jumpMenu(targ,selObj,restore){ //v3.0
           <td><?php echo $obj4->apellido_paterno[$i]." ".$obj4->apellido_materno[$i]." ".$obj4->nombre[$i]; ?>&nbsp;</td>
           <td><?php echo $obj5->nombre; ?>&nbsp;</td>
           <td align="center">
-          <a href="intercambios-alumnos.php?id_alumno=<?php echo $obj4->id_alumno[$i]; ?>">
-          <img src="../images/icon-attach.png" width="16" height="16" /></a>
+          <a href="asesorias-tesis.php?id_alumno=<?php echo $obj4->id_alumno[$i]; ?>">
+          <img src="../images/icon-attach.png" width="16" height="16" title="Reportes de asesor&iacute;as de tesis" /></a>
+          <a href="planes-trabajo.php?id_alumno=<?php echo $obj4->id_alumno[$i]; ?>">
+          <img src="../images/icon-attach.png" width="16" height="16" title="Planes de trabajo" /></a>
+          <a href="informes.php?id_alumno=<?php echo $obj4->id_alumno[$i]; ?>">
+          <img src="../images/icon-attach.png" width="16" height="16" title="Informes" /></a>
           </td>
         </tr>
         <?php
