@@ -152,7 +152,7 @@ function MM_jumpMenu(targ,selObj,restore){ //v3.0
           <td align="center">
           <a href="estancias-alumnos.php?id_alumno=<?php echo $obj4->id_alumno[$i]; ?>">
           <img src="../images/icon-attach.png" width="16" height="16" title="Estancias de investigaci&oacute;n" /></a>
-          <a href="revalidacion-alumnos.php?id_alumno=<?php echo $obj4->id_alumno[$i]; ?>">
+          <a href="revalidaciones-alumnos.php?id_alumno=<?php echo $obj4->id_alumno[$i]; ?>">
           <img src="../images/icon-attach.png" width="16" height="16" title="Revalidaci&oacute;n de estudios" /></a>
           <a href="eventos-alumnos.php?id_alumno=<?php echo $obj4->id_alumno[$i]; ?>">
           <img src="../images/icon-attach.png" width="16" height="16" title="Eventos acad&eacute;micos" /></a>
