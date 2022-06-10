@@ -131,7 +131,7 @@ $obj3->obtenerPrograma();
           </tr>
           <tr class="textoTitulos4">
             <td colspan="2" valign="top"><?php echo $obj2->tipo_profesores; ?></td>
-            <td colspan="2" valign="top"><?php echo $obj2->tipo_dependencias; ?></td>
+            <td colspan="2" valign="top"><?php echo $obj2->tipo_dependencias_txt; ?></td>
           </tr>
           <tr>
             <td>&nbsp;</td>

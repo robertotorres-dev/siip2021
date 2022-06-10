@@ -132,7 +132,23 @@ $obj3->obtenerPrograma();
             </tr>
             <tr class="textoTitulos4">
               <td colspan="2"><input type="text" name="tipo_profesores" size="50" maxlength="50" value="<?php echo $obj2->tipo_profesores; ?>" /></td>
-              <td colspan="2"><input type="text" name="tipo_dependencias" size="50" maxlength="50" value="<?php echo $obj2->tipo_dependencias; ?>" /></td>
+              <td colspan="2">
+                <select name="tipo_dependencias" style="width: 360px" required="required">
+                  <option value=''></option>
+                  <option value='1' <?php if ($obj2->tipo_dependencias == 1) {
+                                      echo "selected='selected'";
+                                    } ?>>Organizadora</option>
+                  <option value='2' <?php if ($obj2->tipo_dependencias == 2) {
+                                      echo "selected='selected'";
+                                    } ?>>Anfitriona</option>
+                  <option value='3' <?php if ($obj2->tipo_dependencias == 3) {
+                                      echo "selected='selected'";
+                                    } ?>>Invitada</option>
+                  <option value='4' <?php if ($obj2->tipo_dependencias == 4) {
+                                      echo "selected='selected'";
+                                    } ?>>Otro</option>
+                </select>
+              </td>
             </tr>
             <tr>
               <td>&nbsp;</td>

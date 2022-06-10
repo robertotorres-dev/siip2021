@@ -87,6 +87,7 @@
         <li><a href="../core/administracion-usuarios.php">Administraci&oacute;n de usuarios</a></li>
         <li><a href="../core/administracion-noticias.php">Administraci&oacute;n de noticias</a></li>
         <li><a href="../core/administracion-telefonos.php">Administraci&oacute;n de tel&eacute;fonos</a></li>
+        <li><a href="../core/administracion-eventos.php">Administraci&oacute;n de eventos</a></li>
         <li><a href="#">Reportes</a>
           <ul>
             <li><a href="../core/reporte-usuarios-bloqueados.php">Usuarios bloqueados</a></li>

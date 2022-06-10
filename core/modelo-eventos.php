@@ -20,6 +20,7 @@ class Eventos extends Conexion
   public $fecha_inicio;
   public $fecha_termino;
   public $status;
+  public $tipo_dependencias_txt;
 
 
   public function __construct()
@@ -110,6 +111,21 @@ class Eventos extends Conexion
       $this->tipo_evento = $obj->tipo_evento;
       $this->fecha_inicio = $obj->fecha_inicio;
       $this->fecha_termino = $obj->fecha_termino;
+
+      switch ($this->tipo_dependencias) {
+        case 1:
+          $this->tipo_dependencias_txt = "Organizadora";
+          break;
+        case 2:
+          $this->tipo_dependencias_txt = "Anfitriona";
+          break;
+        case 3:
+          $this->tipo_dependencias_txt = "Invitada";
+          break;
+        case 4:
+          $this->tipo_dependencias_txt = "Otro";
+          break;
+      }
     }
 
     $res->close();
@@ -136,8 +152,23 @@ class Eventos extends Conexion
       $this->tipo_evento[$i] = $obj->tipo_evento;
       $this->fecha_inicio[$i] = $obj->fecha_inicio;
       $this->fecha_termino[$i] = $obj->fecha_termino;
+
+      switch ($this->tipo_dependencias[$i]) {
+        case 1:
+          $this->tipo_dependencias_txt[$i] = "Organizadora";
+          break;
+        case 2:
+          $this->tipo_dependencias_txt[$i] = "Anfitriona";
+          break;
+        case 3:
+          $this->tipo_dependencias_txt[$i] = "Invitada";
+          break;
+        case 4:
+          $this->tipo_dependencias_txt[$i] = "Otro";
+          break;
+      }
     }
-    
+
     $res->close();
     $this->mysqli->close();
   }
