@@ -9,13 +9,11 @@
   {
     public $id_vinculacion;
     public $id_programa;
-    public $id_estado;
-    public $id_pais;
     public $nombre;
-    public $titular;
-    public $ciudad;
-    public $correo;
-    public $telefono;
+    public $responsable;
+    public $fecha;
+    public $instancias;
+    public $beneficios;
     public $status;
     
     
@@ -49,9 +47,9 @@
         '$this->id_programa', 
         '$this->nombre',
         '$this->responsable',
+        '$this->fecha',
         '$this->instancias',
         '$this->beneficios',
-        '$this->fecha',
         '$this->status' )";
         $res = $this->mysqli->query( $sql );
       
@@ -74,9 +72,9 @@
       $sql = "update vinculaciones set 
       nombre='$this->nombre',
       responsable='$this->responsable',
+      fecha='$this->fecha',
       instancias='$this->instancias',
-      beneficios='$this->beneficios',
-      fecha='$this->fecha'
+      beneficios='$this->beneficios'
       where id_vinculacion='$this->id_vinculacion'";
       $res = $this->mysqli->query( $sql );
       
@@ -98,9 +96,9 @@
         $this->id_programa = $obj->id_programa;
         $this->nombre = $obj->nombre;
         $this->responsable = $obj->responsable;
+        $this->fecha = $obj->fecha;
         $this->instancias = $obj->instancias;
         $this->beneficios = $obj->beneficios;
-        $this->fecha = $obj->fecha;
       }
       
       $res->close( );
@@ -122,9 +120,9 @@
         $this->id_vinculacion[$i] = $obj->id_vinculacion;
         $this->nombre[$i] = $obj->nombre;
         $this->responsable[$i] = $obj->responsable;
+        $this->fecha[$i] = $obj->fecha;
         $this->instancias[$i] = $obj->instancias;
         $this->beneficios[$i] = $obj->beneficios;
-        $this->fecha[$i] = $obj->fecha;
 
       }
       

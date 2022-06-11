@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Clase que gestiona lo relacionado a la tabla Vinculaciones
+ * Clase que gestiona lo relacionado a la tabla Eventos
  */
 
 require_once "../core/conexion.php";
