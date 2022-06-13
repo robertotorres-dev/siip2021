@@ -71,14 +71,14 @@ $obj3->listaEventosPrograma();
       <tr>
         <td><?php echo $obj3->id_evento[$i]; ?></td>
         <td><?php echo $obj3->nombre[$i]; ?></td>
-        <td><?php echo $obj3->lugar[$i]; ?></td>
-        <td><?php echo $obj3->profesores[$i]; ?></td>
-        <td><?php echo $obj3->tipo_profesores[$i]; ?></td>
-        <td><?php echo $obj3->dependencias[$i]; ?></td>
-        <td><?php echo $obj3->tipo_dependencias[$i]; ?></td>
         <td><?php echo $obj3->tipo_evento[$i]; ?></td>
+        <td><?php echo $obj3->lugar[$i]; ?></td>
         <td><?php echo $obj3->fecha_inicio[$i]; ?></td>
         <td><?php echo $obj3->fecha_termino[$i]; ?></td>
+        <td><?php echo $obj3->tipo_profesores[$i]; ?></td>
+        <td><?php echo $obj3->tipo_dependencias_txt[$i]; ?></td>
+        <td><?php echo $obj3->profesores[$i]; ?></td>
+        <td><?php echo $obj3->dependencias[$i]; ?></td>
       </tr>
     <?php
     }
